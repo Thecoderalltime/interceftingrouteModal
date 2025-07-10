@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from "./Logo";
 import Image from "next/image";
-import { ImageOptimizerCache } from "next/dist/server/image-optimizer";
 
 const Header = () => {
   return (

@@ -8,7 +8,6 @@ export default async function LangingPage({ params: { lang } }) {
   return (
     <div className="container my-4 lg:my-8">
       <PhotoCart photo={photo} />
-    
     </div>
   );
 }

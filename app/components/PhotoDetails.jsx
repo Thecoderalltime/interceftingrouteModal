@@ -51,7 +51,8 @@ export const PhotoDetails = ({ photo, dectionary }) => {
             <div className="flex justify-between items-center mb-3">
               {/*  */}
               <div className="flex items-center gap-3">
-                <img
+                <Image
+                height={60} width={60}
                   className="size-12 lg:size-14 rounded-full border"
                   src={photo?.author?.avatar}
                   alt="avatar"
@@ -67,7 +68,7 @@ export const PhotoDetails = ({ photo, dectionary }) => {
               </div>
               {/* action */}
               <button className="flex items-center gap-1.5 text-black/60 text-xs xl:text-sm">
-                <img src="/follow.svg" className="w-5 h-5" />
+                <Image height={25} width={25} src="/follow.svg" className="w-5 h-5" />
                 {dectionary?.follow}
               </button>
             </div>
@@ -81,15 +82,15 @@ export const PhotoDetails = ({ photo, dectionary }) => {
           <div className="mt-6">
             <div className="flex items-stretch gap-3">
               <button className="flex-1 border py-1.5 rounded text-xs lg:text-sm flex items-center justify-center text-center gap-1.5 font-bold hover:bg-yellow-400">
-                <img src="/heart.svg" className="w-5 h-5" />
+                <Image height={25} width={25} src="/heart.svg" className="w-5 h-5" />
                 {photo?.author?.likes}
               </button>
               <button className="flex-1 border py-1.5 rounded text-xs lg:text-sm flex items-center justify-center text-center gap-1.5 font-bold hover:bg-yellow-400">
-                <img src="/save.svg" className="w-5 h-5" />
+                <Image height={25} width={25} src="/save.svg" className="w-5 h-5" />
                 {dectionary?.save}
               </button>
               <button className="flex-1 border py-1.5 rounded text-xs lg:text-sm flex items-center justify-center text-center gap-1.5 font-bold hover:bg-yellow-400">
-                <img src="/share.svg" className="w-5 h-5" />
+                <Image height={25} width={25} src="/share.svg" className="w-5 h-5" />
                 {dectionary?.share}
               </button>
             </div>

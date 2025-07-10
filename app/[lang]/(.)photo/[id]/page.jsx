@@ -9,7 +9,7 @@ const page = async ({ params: { id, lang } }) => {
   
   return (
     <Modal>
-      <PhotoDetails lang={lang} id={id} photo={photo}/>
+      <PhotoDetails dectionary={dectionary}   photo={photo}/>
       
     </Modal>
   );
