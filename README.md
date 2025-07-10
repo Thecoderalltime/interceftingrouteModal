@@ -1,4 +1,4 @@
-This is a [check the vercel link]([[https://interceftingroute-modal-afwr.vercel.app/en](https://interceftingroute-modal-afwr.vercel.app/en)
+This is a check the vercel link :([[https://interceftingroute-modal-afwr.vercel.app/en](https://interceftingroute-modal-afwr.vercel.app/en)
 
 ## Getting Started
 
