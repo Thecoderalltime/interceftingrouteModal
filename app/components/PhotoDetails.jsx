@@ -1,13 +1,16 @@
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
-export const PhotoDetails = ({photo,dectionary}) => {
+export const PhotoDetails = ({ photo, dectionary }) => {
   return (
     <div className="container my-4 lg:my-8">
       {/*  */}
       <div className="grid grid-cols-12 gap-4 2xl:gap-10 ">
         {/* main photo */}
         <div className="col-span-12 lg:col-span-8 border rounded-xl">
-          <img
+          <Image
+            width={800}
+            height={600}
             className="max-w-full h-full max-h-[70vh] mx-auto"
             src={photo?.url}
             alt=""
@@ -16,11 +19,9 @@ export const PhotoDetails = ({photo,dectionary}) => {
         {/* main photo ends */}
         {/* details card */}
         <div className="p-6 border rounded-xl col-span-12 lg:col-span-4  ">
-          <h2 className="text-lg lg:text-2xl font-bold mb-2">
-            {photo?.title}
-          </h2>
+          <h2 className="text-lg lg:text-2xl font-bold mb-2">{photo?.title}</h2>
           <div className="text-xs lg:text-sm text-black/60 mb-6">
-           {photo?.tags?.map(tag=> `${tag} `)}
+            {photo?.tags?.map((tag) => `${tag} `)}
           </div>
           {/* info rows */}
           <div className="space-y-2.5 text-black/80 text-xs lg:text-sm">
@@ -56,9 +57,11 @@ export const PhotoDetails = ({photo,dectionary}) => {
                   alt="avatar"
                 />
                 <div className="spacy-y-3">
-                  <h6 className="lg:text-lg font-bold">{photo?.author?.name}</h6>
+                  <h6 className="lg:text-lg font-bold">
+                    {photo?.author?.name}
+                  </h6>
                   <p className="text-black/60 text-xs lg:text-sm">
-                   {dectionary?.followers}
+                    {dectionary?.followers}
                   </p>
                 </div>
               </div>
@@ -79,8 +82,7 @@ export const PhotoDetails = ({photo,dectionary}) => {
             <div className="flex items-stretch gap-3">
               <button className="flex-1 border py-1.5 rounded text-xs lg:text-sm flex items-center justify-center text-center gap-1.5 font-bold hover:bg-yellow-400">
                 <img src="/heart.svg" className="w-5 h-5" />
-                             {photo?.author?.likes}
-
+                {photo?.author?.likes}
               </button>
               <button className="flex-1 border py-1.5 rounded text-xs lg:text-sm flex items-center justify-center text-center gap-1.5 font-bold hover:bg-yellow-400">
                 <img src="/save.svg" className="w-5 h-5" />
@@ -88,7 +90,7 @@ export const PhotoDetails = ({photo,dectionary}) => {
               </button>
               <button className="flex-1 border py-1.5 rounded text-xs lg:text-sm flex items-center justify-center text-center gap-1.5 font-bold hover:bg-yellow-400">
                 <img src="/share.svg" className="w-5 h-5" />
-               {dectionary?.share}
+                {dectionary?.share}
               </button>
             </div>
           </div>
@@ -97,5 +99,5 @@ export const PhotoDetails = ({photo,dectionary}) => {
       </div>
       {/*  */}
     </div>
-  )
-}
+  );
+};
